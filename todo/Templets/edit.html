@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="edits1">
+        <h1 align="center" class="upage"><u>Update Page</u></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+     <table>
+    {{form.as_table}}
+     </table>
+    <button type="submit">confirm</button>
+</form>
+
+</center>
+
+{% endblock %}
